@@ -1,66 +1,74 @@
-@charset "UTF-8";
+@charset "utf-8";
+//変数設定
+$maincolor: #4A403A;
+$textsize: 16px;
+$titlesize: 26px;
+
 /*==================共通設定================*/
 img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
 }
 
 p,
 dd,
 dt {
-  color: #4A403A;
-  font-family: "游明朝";
-  font-size: 16px;
+    color: $maincolor;
+    font-family: '游明朝';
+    font-size: $textsize;
 }
 
 h1,
 button {
-  color: #4A403A;
-  font-family: "游明朝";
-  font-size: 26px;
+    color: $maincolor;
+    font-family: '游明朝';
+    font-size: $titlesize;
 }
 
 a {
-  text-decoration: none;
-  color: #4A403A;
+    text-decoration: none;
+    color: $maincolor;
 }
 
 li a:hover {
-  color: #b7282e;
+    color: #b7282e;
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .btn {
-  padding: 15px 25px;
-  border: 1px solid #4A403A;
-  transition: all 0.5s 0s ease;
+    padding: 15px 25px;
+    border: 1px solid $maincolor;
+    transition: all 0.5s 0s ease;;
 }
 
 .btn:hover {
-  background-color: #b7282e;
-  border: #fff;
+    background-color: #b7282e;
+    border: #fff;
 }
 
-.btn__text:hover {
-  color: #fff;
+.btn__text {
+    &:hover {
+        color: #fff;
+    }
 }
 
 main {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 /*===============header================*/
+
 header {
-  background: #000;
+    background: #000;
 }
 
 .menu-btn,
@@ -70,468 +78,606 @@ header {
 }
 
 .gnavi {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-}
-.gnavi__list {
-  display: flex;
-  padding-top: 25px;
-  font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+
+    &__list {
+        display: flex;
+        padding-top: 25px;
+        font-size: 22px;
+
+    }
 }
 
 .gnavi__link {
-  color: #fff;
-  font-family: "游明朝";
-  padding-left: 50px;
+    color: #fff;
+    font-family: '游明朝';
+    padding-left: 50px;
 }
 
 .title__link {
-  max-width: 400px;
+    max-width: 400px;
 }
 
 /*==========BigBG=============*/
+
 #slider {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
 
 .slider__text {
-  display: block;
-  font-size: 30px;
-  color: #fff;
-  text-align: center;
-  margin-top: 200px;
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-top: 200px;
 }
-
 /*========#about==============*/
 #about {
-  padding-top: 209px;
+    padding-top: 209px;
 }
 
 .about__text {
-  text-align: center;
+    text-align: center;
 }
 
 .about__text p:first-of-type {
-  margin-bottom: 74px;
+    margin-bottom: 74px;
 }
 
 .about__text p:last-of-type {
-  margin-bottom: 63px;
-  line-height: 3rem;
+    margin-bottom: 63px;
+    line-height: 3rem;
 }
 
 .about__text button {
-  margin-bottom: 131px;
+    margin-bottom: 131px;
 }
 
 /*=============#news================*/
+
 .news {
-  margin-bottom: 176px;
-}
-.news__box {
-  margin-top: 45px;
+    margin-bottom: 176px;
+
+    &__box {
+        margin-top: 45px;
+    }
+
 }
 
 .news__item {
-  display: flex;
-  padding: 33px 27px;
-  border-top: 1px solid #4A403A;
-}
-.news__item:last-of-type {
-  border-bottom: 1px solid #4A403A;
-}
-.news__item__link {
-  color: #b7282e;
-}
-.news__item__link:hover {
-  opacity: 0.5;
+    display: flex;
+    padding: 33px 27px;
+    border-top: 1px solid $maincolor;
+
+    &:last-of-type {
+        border-bottom: 1px solid $maincolor;
+    }
+
+    &__link {
+        color: #b7282e;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }
 
 dd {
-  padding-left: 60px;
+    padding-left: 60px;
 }
 
 /*================#onsen===============*/
 .onsen h1 {
-  text-align: center;
-  margin-bottom: 122px;
+    text-align: center;
+    margin-bottom: 122px;
 }
 
-.onsen__box {
-  display: flex;
-}
-.onsen__pic {
-  max-width: 590px;
-  max-height: 429px;
-}
-.onsen__text {
-  margin: 0 107px 231px 107px;
-  padding-top: 158px;
+.onsen {
+    &__box {
+        display: flex;
+    }
+
+    &__pic {
+        max-width: 590px;
+        max-height: 429px;
+    }
+
+    &__text {
+        margin: 0 107px 231px 107px;
+        padding-top: 158px;
+    }
 }
 
 .btn__box {
-  margin: 186px auto;
-  text-align: center;
+    margin: 186px auto;
+    text-align: center;
 }
 
 #onsen {
-  margin-bottom: 292px;
+    margin-bottom: 292px;
 }
 
 /*==================#yoyaku===================*/
 #yoyaku {
-  background-image: url(../images/onsenback02.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding-bottom: 148px;
-  margin-bottom: 141px;
+    background-image: url(../images/onsenback02.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding-bottom: 148px;
+    margin-bottom: 141px;
 }
 
 .yoyaku h1 {
-  padding-top: 121px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 59px;
+    padding-top: 121px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 59px;
 }
 
 .yoyaku p {
-  color: #fff;
-  text-align: center;
-  line-height: 3rem;
-  margin-bottom: 72px;
+    color: #fff;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 72px;
 }
 
 .btn__box__sec {
-  text-align: center;
-  margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .btn__box__sec button {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 /*===================#gurume================*/
 .gurume h1 {
-  text-align: center;
-  margin-bottom: 131px;
+    text-align: center;
+    margin-bottom: 131px;
 }
 
 .gurume__container {
-  max-width: 800px;
-  margin: 0 auto 80px auto;
-  display: grid;
-  gap: 23px;
-  grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    display: grid;
+    gap: 23px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .btn__box__thi {
-  text-align: center;
-  margin-bottom: 70px;
+    text-align: center;
+    margin-bottom: 70px;
 }
 
 /*======================#event========================*/
 #event {
-  background-image: url(../images/onsenback03.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding-bottom: 46px;
-  margin-bottom: 121px;
+    background-image: url(../images/onsenback03.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding-bottom: 46px;
+    margin-bottom: 121px;
 }
 
 .event h1 {
-  color: #fff;
-  text-align: center;
-  padding-top: 83px;
-  margin-bottom: 63px;
+    color: #fff;
+    text-align: center;
+    padding-top: 83px;
+    margin-bottom: 63px;
 }
 
-.event__box {
-  text-align: center;
-  padding-bottom: 63px;
-}
-.event__pic {
-  min-width: 792px;
+.event {
+
+    &__box {
+        text-align: center;
+        padding-bottom: 63px;
+    }
+
+    &__pic {
+        min-width: 792px;
+    }
+
 }
 
 /*=====================#contact====================*/
 #contact {
-  margin-bottom: 250px;
+    margin-bottom: 250px;
 }
 
 .contact h1 {
-  text-align: center;
-  margin-bottom: 104px;
+    text-align: center;
+    margin-bottom: 104px;
 }
 
 .contact__box {
-  font-family: "游明朝";
-  justify-content: space-between;
-  margin-bottom: 33px;
-}
-.contact__box span {
-  color: #b7282e;
-}
-.contact__box input {
-  border: 1px solid #4A403A;
-  padding: 0.5rem 12rem 0.5rem 0.5rem;
+    font-family: '游明朝';
+    justify-content: space-between;
+    margin-bottom: 33px;
+
+    span {
+        color: #b7282e;
+    }
+
+    input {
+        border: 1px solid $maincolor;
+        padding: 0.5rem 12rem 0.5rem 0.5rem;
+    }
+
+
 }
 
 form {
-  text-align: center;
+    text-align: center;
 }
 
-input[type=text] {
-  margin-left: 86px;
+
+input[type="text"] {
+    margin-left: 86px;
 }
 
-input[type=email] {
-  margin-left: 22px;
+input[type="email"] {
+    margin-left: 22px;
 }
 
-input[type=tel] {
-  margin-left: 55px;
+input[type="tel"] {
+    margin-left: 55px;
 }
 
 .radio__box {
-  display: flex;
-  font-family: "游明朝";
-  justify-content: center;
-}
-.radio__box__item {
-  margin-left: 51px;
+    display: flex;
+    font-family: '游明朝';
+    justify-content: center;
+
+    &__item {
+        margin-left: 51px;
+    }
 }
 
 .radio__box p {
-  padding-right: 101px;
-  margin-bottom: 33px;
+    padding-right: 101px;
+    margin-bottom: 33px;
 }
 
 textarea {
-  width: 100%;
-  max-width: 437px;
-  height: 6rem;
-  border: 1px #4A403A solid;
-  vertical-align: top;
+    width: 100%;
+    max-width: 437px;
+    height: 6rem;
+    border: 1px $maincolor solid;
+    vertical-align: top;
+
 }
 
-input[type=submit] {
-  text-align: center;
-  font-family: "游明朝";
-  padding: 15px 25px;
-  border: 1px solid #4A403A;
-  font-size: 22px;
-}
-input[type=submit]:hover {
-  color: #fff;
+input[type="submit"] {
+    text-align: center;
+    font-family: '游明朝';
+    padding: 15px 25px;
+    border: 1px solid $maincolor;
+    font-size: 22px;
+    
+    &:hover {
+        color: #fff;
+    }
 }
 
 /*==============--footer=================*/
 footer {
-  background-color: #000;
+    background-color: #000;
 }
 
 .under__box {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .under__list {
-  display: flex;
-  padding-top: 50px;
+    display: flex;
+    padding-top: 50px;
 }
 
 .under__link {
-  color: #fff;
-  font-family: "游明朝";
-  padding-left: 65px;
-  font-size: 22px;
+    color: #fff;
+    font-family: '游明朝';
+    padding-left: 65px;
+    font-size: 22px;
 }
 
 .title__logo {
-  max-width: 300px;
-  padding-top: 50px;
+    max-width: 300px;
+    padding-top: 50px;
 }
 
 small {
-  display: block;
-  text-align: center;
-  color: #fff;
-  padding: 100px 0 20px 0;
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 100px 0 20px 0;
 }
 
 /*==================モバイル版=========================*/
-@media screen and (max-width: 600px) {
-  .gnavi {
-    display: none;
-  }
 
-  .hum-gnav,
-.title__link__mb {
-    display: block;
-  }
+@media screen and (max-width:600px) {
 
-  .mb__menu {
-    display: flex;
-  }
+    .gnavi {
+        display: none;
+    }
 
-  .title__link__mb {
-    width: 200px;
-    margin: 0 auto;
-    background: none;
-  }
+    .hum-gnav,
+    .title__link__mb {
+        display: block;
+        padding: 30px;
+      }
 
-  .menu-btn {
-    display: block;
-    position: fixed;
-    right: 0;
-    top: 10px;
-    width: 60px;
-    height: 60px;
-    padding: 4px 4px;
-    border: 2px solid #FFF;
-    border-radius: 10px;
-    background-color: #FFF;
-    z-index: 9999;
-  }
+      .mb__menu {
+        display: flex;
+      }
 
-  .menu-btn:hover {
-    opacity: 0.7;
-  }
+      .title__link__mb {
+        width: 200px;
+        margin: 0 auto;
+        background: none;
+      }
+    
+      .menu-btn {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 10px;
+        width: 60px;
+        height: 60px;
+        padding: 4px 4px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        background-color: #FFF;
+        z-index: 9999;
+      }
+    
+      .menu-btn:hover {
+        opacity: 0.7;
+      }
+    
+      .menu_bdbox {
+        width: 26px;
+        height: 26px;
+        margin: 0 auto;
+        position: relative;
+      }
+    
+      .humburger-menu__bd {
+        display: block;
+        width: 26px;
+        height: 4px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        transition: all 0.5s ease;
+        border-radius: 5px;
+        z-index: 500;
+      }
+    
+    
+      .bar1 {
+        top: 0;
+        background-color: #b7282e;
+      }
+    
+      .bar2 {
+        top: 11px;
+        background-color: #b7282e;
+      }
+    
+      .bar3 {
+        bottom: 0;
+        background-color: #b7282e;
+      }
+    
+      #humburger-menu__menu {
+        text-align: center;
+        color: #b7282e;
+        display: block;
+        font-size: 13px;
+        line-height: .8;
+        margin-top: 3px;
+        //  transition: all 0.5s ease;
+      }
+    
+      // 開いた時の動作
+      /*
+      ハンバーガーメニューがクリックされたら
+      上の線を真ん中に移動させて45℃回転
+     */
+      .bar1.open {
+        top: 11px;
+        transform: rotate(45deg);
+      }
+    
+      /*
+        ハンバーガーメニューがクリックされたら
+        真ん中の線は透明化して見えないようにする
+      */
+      .bar2.open {
+        opacity: 0;
+      }
+    
+      /*
+        ハンバーガーメニューがクリックされたら
+        下の線は真ん中に移動させて-45℃回転
+      */
+      .bar3.open {
+        top: 11px;
+        transform: rotate(-45deg);
+      }
+    
+      .hum-gnav.open #hum-gnav__inner {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+      }
+    
+    
+      /*メニュー中身ココカラ*/
+      #hum-gnav {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: -120%;
+        width: 50%;
+        height: 100vh;
+        background: #FFF;
+        transition: all 0.6s;
+      }
+    
+      #hum-gnav.open {
+        right: 0;
+      }
+    
+      #hum-gnav.open #hum-gnav__inner {
+        position: fixed;
+        z-index: 999;
+        width: 50%;
+        height: 100vh;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+      .gnav__ul {
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    
+      #hum-gnav li {
+        list-style: none;
+        text-align: center;
+      }
+    
+      #hum-gnav li a {
+        color: #b7282e;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+      }
+    
+      /*========ここまでハンバーガーメニュー=================*/
 
-  .menu_bdbox {
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    position: relative;
-  }
+      .onsen__box {
+        flex-direction: column;
+        justify-content: start;
+      }
 
-  .humburger-menu__bd {
-    display: block;
-    width: 26px;
-    height: 4px;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    transition: all 0.5s ease;
-    border-radius: 5px;
-    z-index: 500;
-  }
+      .slider__text {
+        font-size: 20px;
+      }
 
-  .bar1 {
-    top: 0;
-    background-color: #b7282e;
-  }
+      .vegas-wrapper {
+        height: 100vh;
+      }
 
-  .bar2 {
-    top: 11px;
-    background-color: #b7282e;
-  }
+      #about {
+        padding-top: 70px;
+      }
 
-  .bar3 {
-    bottom: 0;
-    background-color: #b7282e;
-  }
+      #news {
+        max-width: 80%;
+        margin-bottom: 70px;
+      }
 
-  #humburger-menu__menu {
-    text-align: center;
-    color: #b7282e;
-    display: block;
-    font-size: 13px;
-    line-height: 0.8;
-    margin-top: 3px;
-  }
+      .onsen h1 {
+        margin-bottom: 30px;
+      }
 
-  /*
-   ハンバーガーメニューがクリックされたら
-   上の線を真ん中に移動させて45℃回転
-  */
-  .bar1.open {
-    top: 11px;
-    transform: rotate(45deg);
-  }
+      .onsen__text {
+        padding-top: 0;
+        margin-bottom: 30px;
+      }
 
-  /*
-    ハンバーガーメニューがクリックされたら
-    真ん中の線は透明化して見えないようにする
-  */
-  .bar2.open {
-    opacity: 0;
-  }
+      .onsen__pic {
+        max-width: 80%;
+        margin: 0 auto 20px auto;
+      }
 
-  /*
-    ハンバーガーメニューがクリックされたら
-    下の線は真ん中に移動させて-45℃回転
-  */
-  .bar3.open {
-    top: 11px;
-    transform: rotate(-45deg);
-  }
+      .btn__box {
+        margin:30px 0 70px 0;
+      }
 
-  .hum-gnav.open #hum-gnav__inner {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-  }
+      #onsen {
+        margin-bottom: 0;
+      }
 
-  /*メニュー中身ココカラ*/
-  #hum-gnav {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    right: -120%;
-    width: 50%;
-    height: 100vh;
-    background: #FFF;
-    transition: all 0.6s;
-  }
+      .yoyaku h1 {
+        padding-top: 50px;
+      }
 
-  #hum-gnav.open {
-    right: 0;
-  }
+      .yoyaku p {
+        margin-bottom: 30px;
+      }
 
-  #hum-gnav.open #hum-gnav__inner {
-    position: fixed;
-    z-index: 999;
-    width: 50%;
-    height: 100vh;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+      #yoyaku {
+        padding-bottom: 70px;
+        margin-bottom: 70px;
+      }
 
-  .gnav__ul {
-    position: absolute;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+      #gurume {
+        max-width: 80%;
+      }
 
-  #hum-gnav li {
-    list-style: none;
-    text-align: center;
-  }
+      .gurume h1 {
+        margin-bottom: 50px;
+      }
 
-  #hum-gnav li a {
-    color: #b7282e;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-  }
+      .gurume__container {
+        margin-bottom: 30px;
+      }
 
-  /*========ここまでハンバーガーメニュー=================*/
-  .onsen__box {
-    flex-direction: column;
-  }
+      .event h1 {
+        padding-top: 70px;
+      }
+
+      .event__pic {
+        min-width: 80%;
+      }
+
+      #event {
+        margin-bottom: 70px;
+      }
+
+      #contact {
+        width: 90%;
+      }
+      .contact h1 {
+        margin-bottom: 50px;
+      }
+
+      .contact__box {
+        text-align: left;
+      }
+
+      input[type=text],input[type=email],input[type=tel] {
+        margin-left: 0;
+      }
+
+      .radio__box p {
+        padding-right: 10px;
+      }
+
+      .under__box {
+        flex-direction: column;
+      }
+
+      .title__logo {
+        max-width: 200px;
+      }
+
+
 }
-/*# sourceMappingURL=style.css.map */
